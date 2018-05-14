@@ -1,0 +1,119 @@
+<html>
+    <head>
+        <title>Docstar</title>
+        <link href="css/index.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="js/index.js"></script>
+        <script
+	       src="https://code.jquery.com/jquery-3.1.1.js"
+	       integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+	       crossorigin="anonymous">
+        </script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+    </head>
+    <body onload="loader()">
+        <div id="login" class="well well-sm">
+            <form id="login-form" class="form-inline">
+                <table id="logTable" class="pull-right">
+                    <tr>
+                        <td class="logLine">
+                            <input type="text" id="username">
+                        </td>
+                        <td class="labelLog">
+                            <span class="loginLabel">Email</span>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="logLine">
+                            <input type="password" id="password">
+                        </td>
+                        <td class="labelLog">
+                            <span class="loginLabel">Password</span>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td id="logErr"></td>
+                        <td></td>
+                        <td>
+                            <button type="button" id="loginButton" onclick="login()" class="btn btn btn-primary">Login</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+       
+        <div id="user-view">
+            <div id="user-card">
+                <table>
+                    <tr>
+                        <td rowspan="3" id="icon"><img onclick="editProfile()" id="avatar" src="https://cdn1.iconfinder.com/data/icons/basic-app-set/24/user-128.png"></td>
+                        <td id="name"></td>
+                    </tr>
+                    <tr>
+                        <td id = "roles"></td>
+                    </tr>
+                    <tr>
+                        <th id="logout" onclick="logout()">Logout</th>
+                    </tr>
+                </table>
+            </div>
+            <div id="admin-control">
+                <button onclick="getDoc()">Fed Docs</button>
+                <button onclick="getMyDocs()">My Docs</button>
+                <button onclick="createUserView()">Create User</button>
+                <button onclick="getUsers()">Users</button>
+            </div>
+            <div id="doc-list">
+                <div>
+                    <form id="addControl" class="form-inline md-form form-sm">
+                        <input id="queryString" class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
+                        <div class="form-group">
+                            <select class="form-control" id="queryType">
+                                <option value="">All</option>
+                                <option value="Rule">Rule</option>
+                                <option value="Prorule">Prorule</option>
+                                <option value="Notice">Notice</option>
+                                <option value="Presdocu">Presdocu</option>
+                            </select>
+                         </div>
+                        <span class="glyphicon btn btn-sm black"><i id="checkbox1" onclick="check1()" class="material-icons">check_box_outline_blank</i></span>
+                        <span class="glyphicon glyphicon-send btn btn-sm black" onclick="search()"></span>
+                    </form>
+                </div>              
+                <table id="documents"></table>
+            </div>
+        </div>
+
+        <div id="create-user-view">
+            <span onclick="exitUserCreate()" class="glyphicon glyphicon-remove btn btn-sm btn-danger pull-right"></span>
+            <table id="create-user-table">
+                <tr><th colspan="2">User</th></tr>
+                <tr>
+                    <td>Username</td>
+                    <td><input type="text" id="new-user"></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" id="new-password"></td>
+                </tr>
+                <tr>
+                    <td >Admin</td>
+                    <td><i id="checkbox" onclick="check()" class="material-icons">check_box_outline_blank</i></td>
+                </tr>
+                <tr>
+                    <td >Enabled</td>
+                    <td><i id="checkbox2" onclick="check2()" class="material-icons">check_box_outline_blank</i></td>
+                </tr>
+                <tr>
+                    <td><button id="createButton" onclick="create()">Create</button>
+                        <button id="updateButton" onclick="updateUser()">Update</button>
+                        <button id="editButton" onclick="editUser()">Edit</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

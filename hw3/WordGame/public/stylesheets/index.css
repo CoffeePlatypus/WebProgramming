@@ -1,0 +1,212 @@
+*{margin: 0; padding: 0; font-family: sans-serif;}
+
+span{
+	color: white;
+}
+
+#bar{
+	margin: 1em 4em;
+	border: 1px solid grey;
+	padding: .5em 1.5em;
+	border-radius: .3em;
+}
+
+#tableBox{
+	margin: 1em 4em;
+	border: 1px solid grey;
+	padding: .5em 1.5em;
+	border-radius: .3em;
+}
+
+.dropLabel{
+	font-weight: bold;
+	color : black;
+}
+
+#colors{
+	display: inline-block;
+	position: relative;
+	top: .2em;
+	margin-left: 2em;
+}
+
+[type="color"] {
+	padding: .2em .4em;
+	width: 3em;
+	height: 2em;
+	border-bottom-right-radius: .3em;
+	border-top-right-radius: .3em;
+	margin:0;
+	background-color: white;
+	border-style: none;
+	border-left: 1px solid grey;
+}
+
+.colorlabel{
+	display: inline-block;
+	padding-left: .3em;
+	margin:0;
+	border-radius: .3em;
+	background-color: #e8eaef;
+	border: 1px solid grey;
+	overflow: hidden;
+	color : black;
+}
+
+select{
+	width: 7em;
+	padding: .3em .5em;
+	border-radius: .3em;
+	border: 1px solid grey;
+}
+
+#fontSelect{
+	width: 8.5em;
+}
+
+#drops{
+	display: inline-block;
+	position: relative;
+	top: -.4em;
+}
+
+#table{
+	//margin: 1em 4em !important;
+	//border: 1px solid grey;
+	//padding: .5em 1.5em;
+	//border-radius: .3em;
+	//background-color: #e8eaef;
+}
+
+#modal{
+	margin: 1em 4em;
+	border: 1px solid grey;
+	padding: .5em 1.5em;
+	border-radius: .3em;
+}
+
+.red{
+	display: inline-block;
+	float: right;
+	background-color: red;
+	border-radius: .3em;
+	color: white;
+	padding: .5em;
+}
+
+.close{
+	color: white;
+}
+
+.inline{
+	display: inline-block;
+}
+
+#guess{
+	width: 5em;
+	height: 2.5em;
+	border-radius: .3em;
+}
+
+.viewBox{
+	padding: .2em;
+	margin: .1em;
+	font-size: 3.5vw;
+	border: 1px solid grey;
+}
+
+#wordView{
+	margin: 1em;
+	margin-top: 6em;
+}
+
+#guessView{
+	float:right;
+	margin-top: 2em;
+	margin-right: -1em;
+}
+
+.guessBox{
+	padding: .2em;
+	margin: .1em;
+	font-size: 2.5vw;
+	border: 1px solid grey;
+}
+
+#login{
+	//margin: 30vh 50vw;
+	margin-top: 30vh;
+	float: right;
+	margin-right: 4em;
+	padding: 2em;
+	width: 45em;
+	height: 12em;
+	border: 1px solid grey;
+	border-top-left-radius: 6em;
+	border-bottom-left-radius: 6em;
+	background:rgba(255,255,255,0.5);
+}
+
+.loginLabel{
+	color: black;
+	display: inline-block;
+}
+
+#loginButton{
+	margin: 1em;
+	margin-left: 5em;
+}
+
+td.labelLog{
+	padding: .2em;
+	padding-left: 1em;
+	border-left: 2px solid black;
+}
+
+td.logLine{
+	padding: .2em;
+	padding-right: 1em;
+	border-right: 2p solid black;
+}
+
+/* table.logTable tr{
+	padding: .5em 0;
+} */
+
+#cat{
+	height: 8em;
+	/* padding: .2em; */
+	padding-right: 3em;
+}
+
+#logErr{
+	color: red;
+	font-weight: bold;
+}
+
+.well{
+	background:rgba(255,255,255,0.5);
+}
+
+#logout{
+	margin-top: -2.5em;
+	float: right;
+}
+
+#controls{
+	margin: 1em 4em;
+	border: 1px solid grey;
+	padding: .5em 1.5em;
+	border-radius: .3em;
+}
+
+#greeting {
+	color: black;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+#user{
+	color: black;
+	text-transform: capitalize;
+}

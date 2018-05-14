@@ -1,0 +1,107 @@
+body{
+    background-image: url("http://chainimage.com/images/wallpaper-technology-hd-7-10962-hd-images-wallpapers-hd-image.jpg");
+    background-size: cover;
+}
+
+.card{
+    margin: 2em;
+    padding: 1em 3em;
+    border-radius: 2em;
+    border: 2px solid black;
+    background:rgba(153, 233, 247, 0.5);
+}
+
+.box{
+    background:rgba(255, 255, 255,0.9);
+}
+
+.box:hover{
+    background:rgba(28,28,28,0.90);
+    color: white;
+}
+
+.box-up-left{
+    border-top-left-radius: 1em;
+}
+
+.box-up-right{
+    border-top-right-radius: 1em;
+}
+
+.box-bottom-left{
+    border-bottom-left-radius: 1em;
+}
+
+.box-bottom-right{
+    border-bottom-right-radius: 1em;
+}
+
+p#result{
+	overflow-wrap: break-word;
+  	word-wrap: break-word;
+}
+
+.output{
+    margin: 2em 0;
+    padding: 1em;
+    border-radius: 1em;
+    border: 2px solid black;
+    background:rgba(28,28,28,0.90);
+    color: white;
+}
+
+.cell{
+    padding: .5em 1em;
+}
+
+input[type="number"]{
+    border: 1px solid white;
+    padding: .2em;
+    border-radius: .5em;
+}
+
+input[type="number"]:focus{
+    border: 3px solid #0018f9;
+}
+
+select{
+    border-radius: .2em;
+    padding: .2em;
+}
+
+#dropdown{
+    border: 2px solid black;
+}
+
+td{
+    margin: .5em;
+}
+
+.extra-pad-left{
+    padding-left: 12vw;
+}
+
+.extra-pad-right{
+    padding-right: 12vw;
+}
+
+.h:hover{
+    color: #0018f9;
+}
+
+#slash{
+    font-size: 1.5em;
+    font-weight: 800;
+    cursor: context-menu;
+}
+
+#checkbox{
+    cursor: context-menu;	
+}
+
+#defaultLabel{
+    display: inline-block;
+    margin: .3em;
+    margin-top: -1em;
+
+}

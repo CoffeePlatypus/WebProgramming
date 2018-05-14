@@ -1,0 +1,116 @@
+#login{
+	margin-top: 30vh;
+	float: right;
+	margin-right: 4em;
+	padding: 2em;
+	width: 45em;
+	height: 12em;
+	border: 1px solid grey;
+	border-top-left-radius: 6em;
+	border-bottom-left-radius: 6em;
+	background:rgba(255,255,255,0.7);
+}
+
+.loginLabel{
+	color: black;
+	display: inline-block;
+}
+
+#loginButton{
+	margin: 1em;
+	margin-left: 5em;
+}
+
+td.labelLog{
+	padding: .2em;
+	padding-left: 1em;
+	border-left: 2px solid black;
+}
+
+td.logLine{
+	padding: .2em;
+	padding-right: 1em;
+	border-right: 2p solid black;
+}
+
+.well{
+	background:rgba(255,255,255,0.5);
+}
+
+#user-card{
+    background: white;
+    padding: 1em;
+    border-radius: .5em;
+    border-top-left-radius: 3em;
+    border-bottom-left-radius: 3em;
+    float: right;
+    margin-left: 1em;
+}
+
+#user-view,#create-user-view{
+    background:rgba(255,255,255,0.7);
+    margin: 2em;
+    padding: 2em;
+    border-radius: .5em;
+}
+
+#create-user-table>tr>td{
+    display: inline-block;
+    padding: .5em;
+    margin: .5em;
+}
+
+#create-user-table input{
+    margin: .5em;
+}
+
+#documents>tr:nth-child(even){
+    padding: .5em;
+    background:rgba(25,25,25,0.5);
+    border-radius: .5em;
+}
+
+#documents>tr>td>input,#documents>tr>td>button,button{
+    display: inline-block;
+    padding: .5em;
+    color: black;
+    border-radius: .5em;
+    margin: .5em;
+    background-color: white;
+}
+
+#documents>tr>td>*{
+    max-width: 50vw;
+    display: inline-block;
+    padding: .5em;
+    border-radius: .5em;
+    margin: .5em;
+    background-color: white;
+}
+
+#checkbox,#logout,#checkbox1, #checkbox2{
+    cursor: pointer;
+}
+
+#admin-control{
+    padding-bottom: .5em;
+    display: inline-block;
+}
+
+#admin-control>button{
+    padding: .5em;
+    color: black;
+    border-radius: .5em;
+    margin: .5em;
+    background-color: white;
+}
+
+input[type=number]{
+    width: 4em;
+}
+
+#avatar{
+    width: 3em;
+    margin-right: 1em; 
+    cursor: pointer;
+}

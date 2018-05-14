@@ -1,0 +1,264 @@
+*{margin: 0; padding: 0; font-family: sans-serif;}
+
+span{
+	color: white;
+}
+
+#bar{
+	margin: 1em 4em;
+	border: 1px solid grey;
+	padding: .5em 1.5em;
+	border-radius: .3em;
+}
+
+#tableBox, #userListBox, #newUserBox{
+	margin: 1em 4em;
+	border: 1px solid grey;
+	padding: .5em 1.5em;
+	border-radius: .3em;
+}
+
+.dropLabel{
+	font-weight: bold;
+	color : black;
+}
+
+#colors{
+	display: inline-block;
+	position: relative;
+	top: .2em;
+	margin-left: 2em;
+}
+
+[type="color"] {
+	padding: .2em .4em;
+	width: 3em;
+	height: 2em;
+	border-bottom-right-radius: .3em;
+	border-top-right-radius: .3em;
+	margin:0;
+	background-color: white;
+	border-style: none;
+	border-left: 1px solid grey;
+}
+
+.colorlabel{
+	display: inline-block;
+	padding-left: .3em;
+	margin:0;
+	border-radius: .3em;
+	background-color: #e8eaef;
+	border: 1px solid grey;
+	overflow: hidden;
+	color : black;
+}
+
+select{
+	width: 7em;
+	padding: .3em .5em;
+	border-radius: .3em;
+	border: 1px solid grey;
+}
+
+#fontSelect{
+	width: 8.5em;
+}
+
+#drops{
+	display: inline-block;
+	position: relative;
+	top: -.4em;
+}
+
+#modal,#userView, #addView{
+	margin: 1em 4em;
+	border: 1px solid grey;
+	padding: .5em 1.5em;
+	border-radius: .3em;
+}
+
+#addView{
+	margin: 5em 15em;
+}
+
+.red{
+	display: inline-block;
+	float: right;
+	background-color: red;
+	border-radius: .3em;
+	color: white;
+	padding: .5em;
+}
+
+.close{
+	color: white;
+}
+
+.inline{
+	display: inline-block;
+}
+
+#guess{
+	width: 5em;
+	height: 2.5em;
+	border-radius: .3em;
+}
+
+.viewBox{
+	padding: .2em;
+	margin: .1em;
+	font-size: 3.5vw;
+	border: 1px solid grey;
+}
+
+#wordView{
+	margin: 1em;
+	margin-top: 6em;
+}
+
+#guessView{
+	float:right;
+	margin-top: 2em;
+	margin-right: -1em;
+}
+
+.guessBox{
+	padding: .2em;
+	margin: .1em;
+	font-size: 2.5vw;
+	border: 1px solid grey;
+}
+
+#login{
+	margin-top: 30vh;
+	float: right;
+	margin-right: 4em;
+	padding: 2em;
+	width: 45em;
+	height: 12em;
+	border: 1px solid grey;
+	border-top-left-radius: 6em;
+	border-bottom-left-radius: 6em;
+	background:rgba(255,255,255,0.5);
+}
+
+.loginLabel{
+	color: black;
+	display: inline-block;
+}
+
+#loginButton{
+	margin: 1em;
+	margin-left: 5em;
+}
+
+td.labelLog{
+	padding: .2em;
+	padding-left: 1em;
+	border-left: 2px solid black;
+}
+
+td.logLine{
+	padding: .2em;
+	padding-right: 1em;
+	border-right: 2p solid black;
+}
+
+td.lineRight{
+	border-right: 2px solid black;
+}
+
+#cat{
+	height: 8em;
+	padding-right: 3em;
+}
+
+#ucat{
+	height: 10em;
+	margin: 4em;
+}
+
+#logErr{
+	color: red;
+	font-weight: bold;
+}
+
+.well{
+	background:rgba(255,255,255,0.5);
+}
+
+#logout{
+	margin-top: -2.5em;
+	float: right;
+}
+
+#controls, #addminbar{
+	margin: 1em 4em;
+	border: 1px solid grey;
+	padding: .5em 1.5em;
+	border-radius: .3em;
+}
+
+#greeting,#adminGreeting{
+	color: black;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+#userg, #userAdmin{
+	color: black;
+}
+
+#upbutton{
+	margin-top: -.9em;
+}
+
+#updateButton{
+	margin-top: -3em;
+}
+
+#newNameF, #newNameL, #newEmail, #newPassword{
+	width: 8em;
+	margin: 0 1em;
+}
+
+#newAdminCheckbox, #newEnabledCheckbox{
+	margin: 0 4em;
+}
+
+.tul, .tu{
+	padding: 1em;
+}
+
+.table-center{
+	margin: 1.5em;
+	margin-left: 20vw;
+}
+
+#addControl{
+	margin-top: -2.5em;
+	//margin-left: 20em;
+	float : right;
+	margin-right: 8em;
+}
+
+.black{
+	color:black;
+}
+
+#createUserForm{
+	margin: 2em;
+	margin-bottom: 5em;
+}
+
+#createUserButton{
+	margin-top: -3em;
+}
+
+#updateUserForm{
+	margin-top: 3em;
+}
+
+table{
+	color: black;
+}

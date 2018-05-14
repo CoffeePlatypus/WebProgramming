@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>WordGame</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="stylesheets/index.css" rel="stylesheet" type="text/css">
+    <script src="javascripts/app.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.1.1.js"
+    integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+    crossorigin="anonymous">
+    </script>
+</head>
+<body onload="init()">
+
+    <!--  Login Page -->
+    <div id="login" class="well well-sm">
+        <form id="login-form" class="form-inline">
+            <table id="logTable">
+                <tr>
+                    <td rowspan="3">
+                        <img id="cat" src="/images/CatPlanet.png">
+                    </td>
+                    <td class="logLine">
+                        <input type="text" id="email">
+                    </td>
+                    <td class="labelLog">
+                        <span class="loginLabel">Email</span>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="logLine">
+                        <input type="password" id="userPassword">
+                    </td>
+                    <td class="labelLog">
+                        <span class="loginLabel">Password</span>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td id="logErr"></td>
+                    <td></td>
+                    <td>
+                        <button type="button" id="loginButton" onclick="login()" class="btn btn btn-primary">Login</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <!--User List View-->
+    <div id="adminContent">
+        <div class="well well-sm" id="addminbar">
+            <button id="logoutA" onclick="logout()" class="btn btn btn-primary pull-right">logout</button>
+            <div id="adminStuff">
+                <div id="adminGreeting"> Welcome <span id="userAdmin"></span></div>
+            </div>
+            <form id="addControl" class="form-inline md-form form-sm">
+                <span class="glyphicon glyphicon-send btn btn-sm black" onclick="search()"></span>
+                <input id="searchQuery" class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
+                <span class="glyphicon glyphicon-refresh btn btn-sm black" onclick="getUserList()"></span>
+                <span id="addViewButton" onclick="addView()" class="glyphicon glyphicon-plus btn btn-sm black"></span>
+            </form>
+        </div>
+        <div id="userListBox" class="well well-sm">
+            <table id="userTable" class="table table-condensed">
+                <thead>
+                    <tr id="userHeader">
+                        <th>Name</th>
+                        <th id="emailHeader">Email</th>
+                        <th id="roleHeader">Role</th>
+                        <th id="enabledHeader">Enabled</th>
+                    </tr>
+                </thead>
+                <tbody id="userTableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!--Add user view-->
+    <div id="addView" class="well well-sm">
+        <span onclick="exitUserView()" class="glyphicon glyphicon-remove btn btn-sm btn-danger pull-right"></span>
+        <form id="createUserForm">
+            <div class="form-group row">
+                <label for="newNameF" class="col-sm-2 col-form-label">First Name</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="newNameF" placeholder="First Name">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="newNameL" class="col-sm-2 col-form-label">Last Name</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="newNameL" placeholder="Last Name">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="newEmail" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="newEmail" placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="newPassword" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                  <input type="password" class="form-control" id="newPassword" placeholder="Password">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Admin</label>
+                <div class="form-group row">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="newAdminCheckbox">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Enabled</label>
+                <div class="form-group row">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="newEnabledCheckbox">
+                    </div>
+                </div>
+            </div>
+        </form>
+        <button id="createUserButton" onclick="addUser()" class="btn btn-primary pull-right">Create User</button>
+    </div>
+
+
+    <!--User List View-->
+    <div id="userView" class="well well-sm">
+        <span onclick="exitUserView()" class="glyphicon glyphicon-remove btn btn-sm btn-danger pull-right"></span>
+        <form id="updateUserForm">
+            <div class="form-group row">
+                <label for="usernameFirst" class="col-sm-2 col-form-label">First Name</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="usernameFirst" placeholder="First Name" disabled>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="usernameLast" class="col-sm-2 col-form-label">Last Name</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="usernameLast" placeholder="Last Name" disabled>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="userEmail" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="userEmail" placeholder="Email" disabled>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Admin</label>
+                <div class="form-group row">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="adminCheckbox">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Enabled</label>
+                <div class="form-group row">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="enabledCheckbox">
+                    </div>
+                </div>
+            </div>
+        </form>
+        <button id="updateButton" onclick="updateUser()" class="btn btn btn-primary pull-right">Update User</button>
+    </div>
+
+    <!--Game List View-->
+    <div id="content">
+        <div class="well well-sm" id="controls">
+            <div id="userStuff">
+                <div id="greeting"> Welcome <span id="userg"></span></div>
+            </div>
+            <button id="logout" onclick="logout()" class="btn btn btn-primary">logout</button>
+        </div>
+        <div class="well well-sm" id="bar">
+            <form class="form-inline">
+                <div id="drops">
+                    <span class="dropLabel">Font</span>
+                    <select name="font" id="fontSelect"></select>
+                    <span class="dropLabel">Level</span>
+                    <select name="Level" id="levelSelect"></select>
+                </div>
+                <div id=colors>
+                    <span class="colorlabel">Word
+                        <input type="color" id="wordColor" ></span>
+                        <span class="colorlabel">Guess
+                            <input type="color" id="guessColor" ></span>
+                            <span class="colorlabel">Fore
+                                <input type="color" id="foreColor" ></span>
+                            </div>
+                            <button type="button" id="upbutton" onclick="updateDefaults()"  class="btn btn btn-primary">^</button>
+                            <div class="input-group pull-right">
+                                <button type="button" onclick="createGame()" class="btn btn btn-primary">New Game</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="tableBox" class="well well-sm">
+                        <table id="table" class="table table-condensed">
+                            <thead>
+                                <tr id="header">
+                                    <th>Level</th>
+                                    <th id="phraseHeader">Phrase</th>
+                                    <th id="remainingHeader">Remaining</th>
+                                    <th id="answerHeader">Answer</th>
+                                    <th id="statusHeader">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableBody">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!--Modal - Game Play View-->
+                <div id="modal" class="well well-sm">
+                    <span onclick="exitGame()" class="glyphicon glyphicon-remove btn btn-sm btn-danger pull-right"></span>
+                    <div id="hider">
+                        <div id="gleft" class="inline"></div>
+                        <div class="inline"> guesses remaining. </div>
+                        <form class="form-inline inline">
+                            <input type="text" id="guess" maxlength="1" onkeydown="if(event.keyCode == 13) return false;">
+                            <button type="button" onclick="makeGuess()" class="btn btn btn-primary btn-sm" id="guessButton">Guess</button>
+                        </form>
+                    </div>
+                    <div id="guessView"></div>
+                    <div id="wordView"></div>
+                </div>
+            </body>
+            </html>
