@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Survey</title>
+	</head>
+	<body>
+		<article>
+			<h1>Medical Survey</h1>
+			<p>This survey collects infromation that is only used
+			internally to imporve porducts and services that vetter
+			meet the needs of our clients. The infomation entered
+			on this durvey is provied to third parties without the 
+			written consent of the indivdual completing the survey.
+			</p>
+			<form action="http://138.49.184.110:3000/meds">
+				<fieldset>
+					<legend>Personal</legend>
+					<table>
+						<tr>
+							<td>First Name</td>
+							<td><input type="text" name="fn"></td>
+							<td>Gender</td>
+							<td>Female</td>
+							<td><input type="radio" name="sex" value="F"></td>
+							<td>Male</td>
+							<td><input type="radio" name="sex" value="M"></td>
+						</tr>
+						<tr>
+							<td>Last Name</td>
+							<td><input type="text" name="ln"></td>
+							<td>Citenship</td>
+							<td colspan="4"><select name="citizen">
+									<option value="US">US</option>
+									<option value="CANADA">Canada</option>
+									<option value="MEXICO">Mexico</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>Address</td>
+							<td colspan="6"><textarea name="addr"></textarea></td>
+						</tr>
+					</table>
+				</fieldset>
+				<fieldset>
+					<legend>Medical History</legend>
+					<span>Small Pox</span>
+					<input type="checkbox" name="med" value="sp">
+					<span>Mumps</span>
+					<input type="checkbox" name="med" value="Mumps">
+					<span>RSV</span>
+					<input type="checkbox" name="med" value="rsv">
+					<span>Diabetes</span>
+					<input type="checkbox" name="med" value="dia">
+				</fieldset>
+				<input type="submit">
+			</form>
+			<hr>
+			<div> &copy; CS 202</div>
+		</article>
+	</body>
+</html>

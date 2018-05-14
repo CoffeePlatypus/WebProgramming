@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Order</title>
+	</head>
+	<body>
+		<header>
+			<a href="index.html"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Teacup_clipart.png" alt="logo"></a>
+			<h1>Tee Time Shirts</h1>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="order.html">Order</a></li>
+				</ul>
+			</nav>
+		</header>
+		<article>
+			<h1>Order</h1>
+			<table>
+				<caption>Sizing Chart</caption>
+				<tbody>
+					<tr>
+						<th rowspan="2"></th>
+						<th colspan="2">Shirt Lenght</th>
+						<th colspan="2">Chest Width</th>
+						<th colspan="2">Sleeve Lenght</th>
+					</tr>
+					<tr>
+						<th>M</th>
+						<th>W</th>
+						<th>M</th>
+						<th>W</th>
+						<th>M</th>
+						<th>W</th>
+					</tr>
+					<tr>
+						<th>Small</th>
+						<td>28.5"</td>
+						<td>25.5"</td>
+						<td>18"</td>
+						<td>18"</td>
+						<td>14.5"</td>
+						<td>9.5"</td>
+					</tr>
+					<tr>
+						<th>Medium</th>
+						<td>29.5"</td>
+						<td>26"</td>
+						<td>20"</td>
+						<td>19.5"</td>
+						<td>16"</td>
+						<td>10"</td>
+					</tr>
+					<tr>
+						<th>Large</th>
+						<td>30.5"</td>
+						<td>27.5"</td>
+						<td>22"</td>
+						<td>21"</td>
+						<td>16.5"</td>
+						<td>11"</td>
+					</tr>
+					<tr>
+						<th>XL</th>
+						<td>31.5"</td>
+						<td>29"</td>
+						<td>24"</td>
+						<td>23"</td>
+						<td>17"</td>
+						<td>12"</td>
+					</tr>
+					<tr>
+						<th>XXL</th>
+						<td>32.5"</td>
+						<td>30"</td>
+						<td>25"</td>
+						<td>25"</td>
+						<td>18"</td>
+						<td>13"</td>
+					</tr>
+					<tr>
+						<th>XXXL</th>
+						<td>34"</td>
+						<td>32"</td>
+						<td>27"</td>
+						<td>26.5"</td>
+						<td>18.5"</td>
+						<td>14"</td>
+					</tr>
+				</tbody>
+			</table>
+			<form action="http://138.49.184.110:3000/order">
+				<div>
+					<label for="fn">First Name</label>
+					<input type="text" name="first" id="fn">
+					<label for="ln">Last Name</label> 
+					<input type="text" name="last" id="ln">
+				</div>
+				<div>
+					<label for="deliver">Desired Delivery Date</label>
+					<input type="date" name="desired-delivery-date" id="deliver">
+				</div>
+				<div>
+					<label for="color">Color</label>
+					<select name="color" id="color">
+						<option value="blue">Blue</option>
+						<option value="green">Green</option>
+						<option value="magenta">Magenta</option>
+						<option value="ochre">Ochre</option>
+						<option value="orange">Orange</option>
+						<option value="orange-swirl">Orange Swirl</option>
+						<option value="pineapple">Pineapple</option>
+						<option value="red">Red</option>
+						<option value="sea-foam">Sea Foam</option>
+						<option value="sky-blue">Sky Blue</option>
+						<option value="turquoise">Turquoise</option>
+						<option value="tye-dye">Tye Dye</option>
+						<option value="violet">Violet</option>
+						<option value="yellow">Yellow</option>	
+					</select>
+				</div>
+				<div>
+					<label for="writing">Text on Shirt</label>
+					<input type="text" name="text" id="writing">
+				</div>
+				<div>
+					<label for="comment">Comments</label>
+					<textarea name="comments" id="comment">no comment</textarea>
+				</div>
+				<table>
+					<tr>
+						<th>Shirt Size </th>
+						<th> Gender </th>
+						<th>Quantity</th>
+					</tr>
+					<tr>
+						<td rowspan="2">Small</td>
+						<td>M</td>
+						<td><input type="number" name="m-sm" min="0"></td>
+					</tr>
+					<tr>
+						<td>W</td>
+						<td><input type="number" name="f-sm" min="0"></td>
+					</tr>
+					<tr>
+						<td rowspan="2">Medium</td>
+						<td>M</td>
+						<td><input type="number" name="m-med" min="0"></td>
+					</tr>
+					<tr>
+						<td>W</td>
+						<td><input type="number" name="f-med" min="0"></td>
+					</tr>
+					<tr>
+						<td rowspan="2">Large</td>
+						<td>M</td>
+						<td><input type="number" name="m-lg" min="0"></td>
+					</tr>
+					<tr>
+						<td>W</td>
+						<td><input type="number" name="f-lg" min="0"></td>
+					</tr>
+					<tr>
+						<td rowspan="2">XL</td>
+						<td>M</td>
+						<td><input type="number" name="m-xl" min="0"></td>
+					</tr>
+					<tr>
+						<td>W</td>
+						<td><input type="number" name="f-xl" min="0"></td>
+					</tr>
+					<tr>
+						<td rowspan="2">XXL</td>
+						<td>M</td>
+						<td><input type="number" name="m-xxl" min="0"></td>
+					</tr>
+					<tr>
+						<td>W</td>
+						<td><input type="number" name="f-xxl" min="0"></td>
+					</tr>
+					<tr>
+						<td rowspan="2">XXXL</td>
+						<td>M</td>
+						<td><input type="number" name="m-xxxl" min="0"></td>
+					</tr>
+					<tr>
+						<td>W</td>
+						<td><input type="number" name="f-xxxl" min="0"></td>
+					</tr>
+				</table>
+				<div>
+					<div>Shipping Method</div>
+					<label for="shipg">Ground </label>
+					<input type="radio" name="shipping" value="ground" id="shipg">			
+					<label for="ship2">2 Day </label>
+					<input type="radio" name="shipping" value="2-day" id="ship2">
+					<label for="shipo">Overnight </label>
+					<input type="radio" name="shipping" value="overnight" id="shipo">
+				</div>
+				<div>
+					<div>Extras</div>
+					<label for="allergy">Allergy Free Dyes </label>
+					<input type="checkbox" name="extras" value="allergy-sensitive" id="allergy">
+					<label for="cotton">Premium Cotton </label>
+					<input type="checkbox" name="extras" value="heavy" id="cotton">
+					<label for="domestic">Domestically Produced </label>
+					<input type="checkbox" name="extras" value="domestic" id="domestic">
+					<label for="ultra">Ultra-Violet Protection </label>
+					<input type="checkbox" name="extras" value="uv-protection" id="ultra">
+				</div>
+				<input type="submit">
+			</form>
+		</article>
+		<footer>
+			<nav>
+				<ul>
+					<li><a href="about.html">About</a></li>
+					<li><a href="order.html">Order</a></li>
+				</ul>
+			</nav>
+			<address>
+				5864 Goldfield Rd. <br>
+				Warren, MI 48089<br>
+				email Ttime@outlook.com
+			</address>
+			&copy; Tee Time Shirts
+		</footer>
+	</body>
+</html>

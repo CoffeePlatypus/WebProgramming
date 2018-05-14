@@ -1,0 +1,218 @@
+*{ padding: 0; margin:0;}
+
+body{
+	padding: 2em;
+}
+
+em{
+	text-decoration: underline;
+	font-style: normal;
+}
+
+em.sq::after,em.sq::before{
+	content: "'";
+}
+
+header>a{
+	display:block;
+	background-color:orange;
+	border-radius: 50em;
+	height: 6.5em;
+	width: 95vw;
+	padding-top: .6em;
+	margin-left: -1.5em;
+}
+
+nav>ul>li{
+	display: inline-block;
+}
+
+nav>ul{
+	margin-left: -3em;
+	padding-top: 1em;
+}
+
+nav>ul>li:not(:first-child)::before{
+	content: " | ";
+}
+
+div.logo{
+	content:url(images/spa.png);
+	height:6em;
+	width:6em;
+	border-radius: 50%;
+	background-color:#4f3918;
+	margin-left: .8em;
+}
+
+div.logo:hover {
+	background-color: black;
+}
+
+h1,h2{
+	border-bottom: 1px solid grey;
+	margin: .5em 0;
+}
+p::first-letter{font-size: 2em;}
+
+ul{ padding-left: 3em;}
+
+div.tabs{
+	margin-bottom: 30em;
+}
+div.tab-content.active{
+	padding: 1em;
+	border: 1px solid black;
+	overflow: auto;
+	background-color: #eab669;
+	clear:left;
+	float:left;
+	margin-top: -.1em;
+	margin-left: 3.2em;
+	border-radius: 0 1em 1em 1em;
+}
+ img{
+	float:right;
+	border: 1px solid black;
+	border-radius: 0 1em 1em 0;
+}
+
+div.tab-content.active p::first-letter{
+	display: inline-block;
+	position: relative;
+	margin-top: -.2em;
+	float: left;
+	font-size: 6em;
+	color: #9b1d01;
+	text-shadow: 2px 2px 8px black;
+}
+
+div.tab-content:not(.active) {
+	display:none;
+}
+
+li.tab{
+	display:inline-block;
+	list-style: none;
+	padding: .7em;
+	border: 1px;
+	margin-left: .2em;
+	background-color: #f2d6ae;
+	position:relative;
+	float:left;
+	border-radius: .5em .5em 0 0;
+	padding-bottom: .5em;
+	border-bottom-color: #f2d6ae;
+}
+
+li.tab a {
+	text-decoration: none;
+	color: grey;
+}
+
+li.tab.active{
+	border: 1px solid black;
+	border-bottom-color:#eab669;
+	background-color: #eab669;
+	padding-bottom: .5em;
+}
+
+li.tab.active a{
+	color:black;
+}
+
+li.tab:hover{
+	background-color:  #4f3918;
+}
+
+li.tab:hover a{
+	color:white;
+}
+
+img.avatar{
+	float: left;
+	border-radius: 50%;
+	height: 80px;
+	width: 80px;
+	position: relative;
+	margin: 1em;
+	border: 2px solid black;
+}
+
+img.avatar.shadowed{
+	box-shadow: 2px 2px 5px black;
+}
+
+div.business-card{
+	background-color: white;
+	overflow: auto;
+}
+
+header.bussiness-card-header{
+	padding: 0;
+	margin: 0;
+	background-color: #4f3918;
+}
+
+header.bussiness-card-header h1{
+	margin: 0;
+	background-color: #4f3918;
+	color: white;
+	text-align: center;
+	padding: .1em;
+	border-style: none;
+}
+
+div.contact ul {
+	list-style: none;
+	padding-bottom: 1em;
+	float: right;
+}
+
+div.contact li{
+	display: inline-block;
+	padding: .5em;
+	background-color: #eab669;
+	margin-right: .2em;
+	vertical-align: baseline;
+}
+
+span.phone::before{
+	content: "ph: ";
+}
+span.email::before{
+	content: "em: ";
+}
+
+span.spa::before{
+	content: "SPA";
+	font-weight: bold;
+}
+
+button.business-card-button{
+	display: block;
+	background-color: #4f3918;
+	color: white;
+	width: 100%;
+	border-style: none;
+	padding: .5em 0;
+	font-weight: bold;
+}
+
+div.business-card-body div p{
+	padding: 1em;
+}
+
+footer{
+	position:fixed;
+	bottom:0;
+	left:0;
+	right:0;
+	background-color:tan;
+	padding: 1em;
+	color:grey;
+}
+
+.input{
+	border-radius: .2em;
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Contacts</title>
+    <script src="https://code.jquery.com/jquery-2.1.1.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="meaning.css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">    
+  </head>
+  <body>
+    
+    <header>
+      <a href="home.html"><div class="logo"></div></a>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="meaning.html">Meaning</a></li>
+          <li>Contact</li>                
+        </ul>
+      </nav>
+    </header>
+    
+    <footer>
+      &copy; Society of Philosophy and Arts
+    </footer>
+    
+    <section>
+      <h1>Contact the Society of Philosophy and Arts</h1>
+      <div class="tabs">
+        <ul>
+          <li class="tab active"><a href="#tabs-1">President</a></li>
+          <li class="tab"><a href="#tabs-2">Vice President</a></li>
+          <li class="tab"><a href="#tabs-3">Secretary</a></li>
+        </ul>
+        
+        <div class="tab-content active" id="tabs-1">
+          <div class="business-card">
+            <header class="bussiness-card-header">
+              <h1>Jasmine Shamgar</h1>
+            </header>
+            
+            <div class="business-card-body">
+              <img class="avatar shadowed"
+                   src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Belinda_Fenty.jpg"
+                   alt="Portrait of Jasmine Shamgar">
+              <div>
+                <p>
+                  Jasmine Shamgar has served as President of <span class="spa"></span> for
+                  the last 7 years.  Please contact her with any
+                  questions realted to organizational policies or visions.
+                </p>
+                
+                <div class="contact">
+                  <ul>
+                    <li><span class="phone">655.351.1234</span></li>
+                    <li><span class="email">jshamgar@spa.io</span></li>                
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <button class="business-card-button">+ Connect</button>          
+          </div>
+        </div>
+
+        <div class="tab-content" id="tabs-2">
+          <div class="business-card">
+            <header class="bussiness-card-header">
+              <h1>Hunter Phalgor III</h1>
+            </header>
+            
+            <div class="business-card-body">
+              <img class="avatar shadowed"
+                   src="https://upload.wikimedia.org/wikipedia/commons/4/42/CristianDeLeo.jpg"
+                   alt="Portrait of Hunter Phalgor III">
+              <div>
+                <p>
+                  Hunter Phalgor III is new to the <span class="spa"></span> leadership team and
+                  brings zeal and engergy to his position.  Please
+                  reach out to him with any concerns related to creating new local
+                  organizations or expanding the reach of the <span class="span"></span>
+                  community.
+                </p>
+                
+                <div class="contact">
+                  <ul>
+                    <li><span class="phone">655.351.1235</span></li>
+                    <li><span class="email">hphalgor@spa.io</span></li>                
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <button class="business-card-button">+ Connect</button>          
+          </div>
+        </div>
+
+        <div class="tab-content" id="tabs-3">
+          <div class="business-card">
+            
+            <header class="bussiness-card-header">
+              <h1>Davidson Selvator</h1>
+            </header>
+            
+            <div class="business-card-body">
+              <img class="avatar shadowed"
+                   src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Hasidic_jewish_Roger_David_Servais.jpg"
+                   alt="Portrait of Davidson Selvator">
+              <div>
+                <p>
+                  Davidson Selvator is a longtime member of the leadership team here at <span class="span"></span>.
+                  Contact Davidson with any quetsions related to organizational by-laws, filing annual reports, or
+                  requests for research journals published by <span class="spa"></span>.
+                </p>
+                
+                <div class="contact">
+                  <ul>
+                    <li><span class="phone">655.351.1236 (home office)</span></li>
+                    <li><span class="phone">655.351.1236 (local office)</span></li>                  
+                    <li><span class="email">dselvator@spa.io</span></li>                
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <button class="business-card-button">+ Connect</button>          
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <script>
+      $(document).ready(function () {
+      $('li.tab').click(function () {
+      $('.tabs li.tab').removeClass('active');
+      $(this).addClass('active');
+      
+      var id = $(this).find('a').attr('href');
+      $('.tab-content').removeClass('active');
+      $(id).addClass('active');
+      });
+      });
+    </script>
+  </body>
+</html>

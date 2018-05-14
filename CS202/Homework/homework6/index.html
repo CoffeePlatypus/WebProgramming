@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Weathervane</title>
+    <link href="weathervane.css" rel="stylesheet" />
+    <style>
+      img.logo {
+      position : absolute;
+      top : 9px;
+      left: 5px;
+      width : 80px;
+      filter : drop-shadow(2px 2px 2px #333);
+      }
+    </style>
+    <script
+       src="https://code.jquery.com/jquery-3.1.1.js"
+       integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+       crossorigin="anonymous"></script>
+    <script src="weathervane.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div style="padding-left: 100px;" id="header" class="header">
+      <img src="weathervane.png" class="logo">
+      <h1 class="title">Weathervane</h1>
+      <span class="profile">jdoe@uwlax.edu</span>
+    </div>
+
+    <div id="topbar">
+      <input type="text" placeholder="latitude" id="lat" class="input" style="margin-left:100px"/>
+      <input type="text" placeholder="longitude" id="lon" class="input"/>
+      <input type="button" id="addButton" value="Add Location" onclick="addForecast();" />
+    </div>
+
+
+    <div id="container">
+    </div>
+
+    <div class="footer" id="footer">
+      &copy; The Weathervane Team
+    </div>
+  </body>
+</html>

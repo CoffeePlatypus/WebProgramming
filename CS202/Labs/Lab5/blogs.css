@@ -1,0 +1,93 @@
+*{ padding: 0; margin:0;}
+header{
+	padding: 1em;
+	background-color:#1d5118; 
+	border-bottom-width: 5px; 
+	border-bottom-style:solid;
+	color:white;
+	border-bottom-color:black;
+}
+header nav>ol>li{
+	display:inline-block; 
+}
+header nav>ol>li>a{
+	color:yellow; 
+	text-decoration:none; 
+	text-transform:uppercase;
+}
+header nav>ol>li>a:hover{color:black;}
+header span.author{color: #00ff00;}
+nav>ol>li:not(:first-child)::before{
+	content: " > ";
+	color: white;
+}
+
+
+body{
+	background-color:#ffa62c; 
+	padding:2em;
+	padding-bottom: 3em;
+}
+#logo{
+	background-image: url(george.jpg); 
+	float: right;
+	border-radius: 50%;
+	height:95px;
+	width:95px;
+	margin-top: -3em;
+}
+ol{list-style-type: none; padding-left: 1em;}
+
+.subtitle{color:grey;}	
+
+
+
+article.blog { 
+	border-radius: 1em; 
+	background-color:#f5f5af;
+	padding: 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+	
+span.date{
+	font-size: .75em;
+	color: grey;
+	display:block;
+	font-family: monospace;
+}
+span.author{ font-family:normal;}
+article.blog:not([id]) div.blog-content{ display: none;}
+article.blog:not([id]) h2{color:grey;}
+.crossref{
+	text-decoration-style: dotted; 
+	text-decoration-line:underline;
+	text-decoration-color: teal;
+}
+div.blog-summary{
+	background-color:white;
+	font-style: italic;
+	padding: 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+p{
+	display:block;
+	text-indent: 1em;
+	padding: .5em;
+	
+}
+
+footer{
+	position:fixed;
+	bottom:0;
+	left:0;
+	right:0;
+	top: 93vh;
+	background-color:#1d5118;
+	border-top-width: 5px; 
+	border-top-style:solid;
+	color:white;
+	border-top-color:black;
+	padding: 1em;
+}

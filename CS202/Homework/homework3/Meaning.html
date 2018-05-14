@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Meaning</title>
+    <script src="https://code.jquery.com/jquery-2.1.1.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="meaning.css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">    
+</head>
+<body>
+
+  <header>
+    <a href="home.html"><div class="logo"></div></a>
+    <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li>Meaning</li>
+          <li><a href="contact.html">Contact</a></li>                
+        </ul>
+    </nav>
+  </header>
+
+  
+  <footer>
+    &copy; Society of Philosophy and Arts
+  </footer>
+  
+  <section>
+    <h1>What is the meaning of Life?</h1>
+    <p>
+      Questions about the meaning of life have been expressed in a
+      broad variety of ways, including the following:
+    </p>
+    
+    <ul>
+      <li>Who are we?</li>
+      <li>What is the meaning and significance of life?</li>
+      <li>Why are we here?</li>
+    </ul>
+    
+    <p>
+      The meaning of life is in the philosophical and religious
+      conceptions of existence, social ties, consciousness, and happiness,
+      and borders on many other issues, such as symbolic meaning, ontology,
+      value, purpose, ethics, good and evil, free will, the existence of one
+      or multiple gods, conceptions of God, the soul, and the afterlife.
+      Scientific contributions focus primarily on describing related
+      empirical facts about the universe, exploring the context and
+      parameters concerning the <em class="sq">how</em> of life. Science also studies and can
+      provide recommendations for the pursuit of well-being and a related
+      conception of morality. An alternative, humanistic approach poses the
+      question <q><em>What is the meaning of my life</em>?</q> The value of the question
+      pertaining to the purpose of life may coincide with the achievement of
+      ultimate reality, or a feeling of oneness, or even a feeling of
+      sacredness. 
+    </p>
+
+  
+  <section>
+    <h2>Summaries of Three Viewpoints</h2>
+    <div class="tabs">
+      <ul>
+        <li class="tab"><a href="#tabs-1">Theism</a></li>
+        <li class="tab active"><a href="#tabs-2">Nihilism</a></li>
+        <li class="tab"><a href="#tabs-3">Postmodernism</a></li>
+      </ul>
+      
+      <div class="tab-content" id="tabs-1">
+        <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Stained_glass%2C_Holy_Family_Church%2C_Teconnaught%2C_September_2010_crop.jpg/220px-Stained_glass%2C_Holy_Family_Church%2C_Teconnaught%2C_September_2010_crop.jpg"
+             alt="stained glass window">
+        <p>
+          Theists believe God created the universe and that God had a
+          purpose in doing so. Many theists, including the former atheist
+          Antony Flew, have been persuaded that God created because of the
+          scientific evidence for a low entropy Big Bang more than 13 billion
+          years ago. Theists also hold the view that humans find their meaning
+          and purpose for life in God's purpose in creating. Theists further
+          hold that if there were no God to give life ultimate meaning, value
+          and purpose, then life would be absurd.
+        </p>
+      </div>
+      <div class="tab-content active" id="tabs-2">
+        <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Nietzsche187a.jpg/225px-Nietzsche187a.jpg"
+             alt="Nietzsche">
+        <p>
+          Nihilism suggests that life is without objective meaning.
+          Fredrich Nietzsche characterized nihilism as emptying the world, and
+          especially human existence, of meaning, purpose, comprehensible
+          truth, and essential value; succinctly, nihilism is the process of
+          "the devaluing of the highest values". Seeing the nihilist as a
+          natural result of the idea that God is dead, and insisting it was
+          something to overcome, his questioning of the nihilist's
+          life-negating values returned meaning to the Earth.
+        </p>
+      </div>
+      <div class="tab-content" id="tabs-3">
+        <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Henryk_Miko%C5%82aj_G%C3%B3recki_Polish_composer.jpg/150px-Henryk_Miko%C5%82aj_G%C3%B3recki_Polish_composer.jpg"
+             alt="Gorecki">
+        <p>
+          Postmodernist thought—broadly speaking—sees human nature as
+          constructed by language, or by structures and institutions of human
+          society. Unlike other forms of philosophy, postmodernism rarely
+          seeks out a priori or innate meanings in human existence, but
+          instead focuses on analyzing or critiquing given meanings in order
+          to rationalize or reconstruct them. Anything resembling a "meaning
+          of life", in postmodernist terms, can only be understood within a
+          social and linguistic framework, and must be pursued as an escape
+          from the power structures that are already embedded in all forms of
+          speech and interaction.
+        </p>
+      </div>
+    </div>
+  </section>    
+  </section>
+  
+  <script>
+        $(document).ready(function () {
+        $('li.tab').click(function () {
+        $('.tabs li.tab').removeClass('active');
+        $(this).addClass('active');
+        
+        var id = $(this).find('a').attr('href');
+        $('.tab-content').removeClass('active');
+        $(id).addClass('active');
+        });
+        });
+  </script>
+</body>
+</html>

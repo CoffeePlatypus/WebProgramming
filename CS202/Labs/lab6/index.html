@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/charity.cs.uwlax.edu/assets/ico/favicon.ico">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script  src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="  crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-sanitize.min.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/js_intro.js"></script>
+
+    <title>JavaScript</title>
+    <style>
+      body { padding: 1em 1em 4em; }
+
+      .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      padding: 1em;
+      background-color: rgb(230,230,230);
+      color: gray;
+      width: 100%;
+      }
+
+      .shadowed {
+      border : 1px solid gray;
+      box-shadow : 3px 3px 3px gray;
+      }
+
+      .centered {
+      display : block;
+      margin-left:auto;
+      margin-right: auto;
+      }
+
+      img.logo {
+      position: absolute;
+      top : 30px;
+      right :80px;
+      }
+
+      td {
+      vertical-align: top;
+      }
+
+      table {
+      margin-top: 2em;
+      }
+
+      .caption {
+      padding: 1em;
+      text-align :center;
+      font-weight: bold;
+      }
+
+      div[class^="blog"] {
+      padding : 1em;
+      border : 1px solid gray;
+      background-color : rgba( 250, 250, 220, .6 );
+      margin : .5em 2em;
+      }
+
+      .component {
+      margin : 1em 2em;
+      overflow : auto;
+      }
+      
+      .form-control { margin-bottom : 1em; }
+
+      ul.examples > li {
+      font-family : Courier, monospaced;
+      list-style-type : none;
+      }
+
+      .example > .input {
+      cursor : pointer;
+      }
+
+      ul.sm > li { font-size : .75em; }
+
+      div.types::before {
+      content : "types: ";
+      }
+
+      div.output::before {
+      content : "values: ";
+      }
+
+      .problem {
+      margin-top : 4em;
+      }
+
+      div.interaction { padding : 0 1em; border : 1px solid rgb(230,230,230); border-radius : .5em; background-color : rgb( 250,250,250); }
+      div.output, div.types { font-family : Courier, monospaced; }
+      section.problem { margin : 4em 0; }
+      h2 { border-bottom : 1px solid #eee; }
+    </style>
+  </head>
+
+  <body ng-app="Lab.App">
+    <div id="wrap" ng-controller="Lab.App.Controller">
+
+      <div class="container">
+        <div class="page-header">
+          <h1 class="page-heading">Bare JavaScript</h1>
+          <img class="logo" src="http://charity.cs.uwlax.edu/views/cs202/labs/js_intro/images/logo.png" width="70"  />
+        </div>
+        
+        <section>
+          <h2>Overview</h2>          
+          <p>
+            Write a single JavaScript file named <b>js_intro.js</b> that contains the following functions.  When this very
+            web page is refreshed, it will load your file, execute your code, and display the results.
+          </p>
+          <ol>
+            <li>Create a folder named <b>lab6</b>.</li>
+            <li>Copy this very file (<a href="index.html">index.html</a>) into the <b>lab6</b> folder (right-click and save-as).</li>
+            <li>Create a sub-folder named <b>js</b></li>
+            <li>Copy <a href="js/app.js">app.js</a> into the <b>js</b> sub-folder.</li>
+            <li>Create a file named <b>js_intro.js</b> in the <b>js</b> sub-folder and write the methods described below.</li>
+          </ol>
+        </section>
+
+        
+        <div class="problem" ng-repeat="problem in problems">
+          <h2>{{problem.title}}</h2>
+          <div ng-bind-html="trusted(problem.description)">
+          </div>
+          
+          <section>
+            <h3>Examples</h3>
+            <ul class="examples">
+              <li ng-repeat="ex in problem.examples" ng-click="selectExample(problem, ex)" class="example">
+                {{problem.name}}(<span class="btn btn-xs btn-primary">{{display(ex.input)}}</span>) => {{display(ex.output)}}
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>Interaction</h3>
+            <div class="interaction">
+              <div class="component">
+                <form id="{{problem.p1}}">
+                  <h4>Input</h4>
+                  <input type="text" id="p1-input" class="form-control" ng-model="problem.interactionInput" ng-change="clear(problem)">
+                  <span class="btn btn-primary pull-right" id="p1-apply" ng-click="apply(problem)">Apply</span>
+                </form>
+              </div>
+              
+              <div class="component">
+                <h4>Output</h4>
+                <div id="p1-output" class="well well-sm" ng-style="{'background-color':{true:'lightgreen', false:'red', maybe:'#eaeaea'}[validates(problem)]}">
+                  {{display(problem.interactionOutput)}}
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+        
+      <div id="footer" class="footer highlightable">
+        <div class="container">
+          &copy; Kenny Hunt
+        </div>
+      </div>
+  </body>
+</html>
+

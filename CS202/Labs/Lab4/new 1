@@ -1,0 +1,17 @@
+1) h1 +
+2) section + section
+3) p:first-of-type
+4) abbr ~ abbr ~ abbr
+5) [class^="zen"]:nth-of-type(even)
+6) abbr:first-child
+7) abbr:not([title])
+8) [href^="/examples"]:first-of-type
+9) li:nth-of-type(3n+1)
+10) li > a + a
+11) nav ul li:nth-of-type(even)
+12) [id*="zen"]
+13) p:not(p:first-of-type)
+14) p:last-of-type
+15) p:last-of-type a
+16) p:last-of-type a[href^="http://www.mezzoblue.com"]
+17) * :only-child

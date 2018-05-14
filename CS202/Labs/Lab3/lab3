@@ -1,0 +1,17 @@
+1: li
+2: abbr
+3: .zen
+4: p:first-of-type
+5: [class="intro"]
+6: #zen-preamble
+7: [title]
+8: [href^=http]
+9: .intro.benefits
+10: [class^=zen]
+11: abbr:first-child
+12: [href^="/examples"]:first-child
+13: p:nth-child(even)
+14: [id*="zen"]
+15: :empty
+16: :link
+17: :only-child
